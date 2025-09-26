@@ -1,0 +1,8 @@
+#!/bin/sh
+
+uci batch <<EOF
+	delete ucitrack.@filebrowser[-1]
+	add ucitrack filebrowser
+	set ucitrack.@filebrowser[-1].init=filebrowser
+	commit ucitrack
+EOF
