@@ -10,4 +10,4 @@ auth:
   adminPassword: "admin"
 userDefaults:
   ui:
-    locale: "cn"
+    locale: "zhCN"
