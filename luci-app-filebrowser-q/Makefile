@@ -3,8 +3,8 @@
 
 include $(TOPDIR)/rules.mk
 
-LUCI_TITLE:=LuCI app for FileBrowser
-LUCI_DEPENDS:=+filebrowser
+LUCI_TITLE:=LuCI app for FileBrowser Quantum
+LUCI_DEPENDS:=+filebrowser-q
 
 include $(TOPDIR)/feeds/luci/luci.mk
 

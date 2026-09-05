@@ -6,7 +6,7 @@
 
 include $(TOPDIR)/rules.mk
 
-PKG_NAME:=filebrowser
+PKG_NAME:=filebrowser-q
 PKG_VERSION:=1.5.6-stable
 PKG_RELEASE=1
 
@@ -23,14 +23,14 @@ endif
 
 include $(INCLUDE_DIR)/package.mk
 
-define Package/filebrowser
+define Package/filebrowser-q
   SECTION:=net
   CATEGORY:=Network
   DEPENDS:=@(arm||aarch64||x86_64)
   TITLE:=FileBrowser Quantum
 endef
 
-define Package/filebrowser/description
+define Package/filebrowser-q/description
   The best free self-hosted web-based file manager.
 endef
 
@@ -44,20 +44,18 @@ endef
 define Build/Compile
 endef
 
-define Package/filebrowser/conffiles
-/etc/filebrowser/
-/etc/config/filebrowser
+define Package/filebrowser-q/conffiles
+/etc/filebrowser-q/
+/etc/config/filebrowser-q
 endef
 
-define Package/filebrowser/install
+define Package/filebrowser-q/install
 	$(INSTALL_DIR) $(1)/etc/init.d
-	$(INSTALL_BIN) $(CURDIR)/files/filebrowser.init $(1)/etc/init.d/filebrowser
+	$(INSTALL_BIN) $(CURDIR)/files/filebrowser.init $(1)/etc/init.d/filebrowser-q
 	$(INSTALL_DIR) $(1)/etc/config
-	$(INSTALL_CONF) $(CURDIR)/files/filebrowser.config $(1)/etc/config/filebrowser
-	$(INSTALL_DIR) $(1)/etc/filebrowser
-	$(INSTALL_CONF) $(CURDIR)/files/config.yaml $(1)/etc/filebrowser/config.yaml
+	$(INSTALL_CONF) $(CURDIR)/files/filebrowser.config $(1)/etc/config/filebrowser-q
 	$(INSTALL_DIR) $(1)/usr/bin/
-	$(INSTALL_BIN) $(DL_DIR)/linux-$(PKG_ARCH)-filebrowser $(1)/usr/bin/filebrowser
+	$(INSTALL_BIN) $(DL_DIR)/linux-$(PKG_ARCH)-filebrowser $(1)/usr/bin/filebrowser-q
 endef
 
-$(eval $(call BuildPackage,filebrowser))
+$(eval $(call BuildPackage,filebrowser-q))

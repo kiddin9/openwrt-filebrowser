@@ -3,10 +3,10 @@
 START=99
 STOP=10
 
-CONF="filebrowser"
-PROG="/usr/bin/filebrowser"
-CONF_PATH="/etc/filebrowser/config.yaml"
-PID_FILE="/var/run/filebrowser.pid"
+CONF="filebrowser-q"
+PROG="/usr/bin/filebrowser-q"
+CONF_PATH="/etc/filebrowser-q/config.yaml"
+PID_FILE="/var/run/filebrowser-q.pid"
 
 start() {
     config_load "$CONF"
@@ -28,7 +28,7 @@ start() {
         cat <<EOF > "$CONF_PATH"
 server:
   port: $listen_port
-  database: "/etc/filebrowser/database.db"
+  database: "/etc/filebrowser-q/database.db"
   sources:
     - path: "$root_path"
       name: "$root_name"
@@ -54,7 +54,7 @@ EOF
 }
 
 stop() {
-    kill -9 `pidof filebrowser | sed "s/$$//g"` 2>/dev/null
+    kill -9 `pidof filebrowser-q | sed "s/$$//g"` 2>/dev/null
     rm -f "$PID_FILE"
     echo "filebrowser stopped"
 }
