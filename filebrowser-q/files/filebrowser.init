@@ -35,6 +35,9 @@ server:
       name: "$root_name"
       config:
         defaultEnabled: true
+  cacheDir: "/tmp"
+  cacheDirCleanup: true
+  cacheDirMaxSizeMB: 500
 auth:
   methods:
     password:
