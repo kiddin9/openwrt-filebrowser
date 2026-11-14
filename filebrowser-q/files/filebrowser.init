@@ -40,7 +40,7 @@ auth:
     password:
       enabled: true
       adminUsername: "admin"
-      adminPassword: "admin"
+      adminPassword: "admin123"
 userDefaults:
   ui:
     locale: "zhCN"
