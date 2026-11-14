@@ -38,6 +38,9 @@ msgstr "未运行"
 msgid "Open Web Interface"
 msgstr "打开 Web 界面"
 
+msgid "Password cannot be \"admin\" (treated as unset by FileBrowser Quantum, minimum 5 characters)."
+msgstr "密码不能设为 \"admin\"（FileBrowser Quantum 会将其视为未设置，且密码至少需 5 位）。"
+
 msgid "RUNNING"
 msgstr "运行中"
 
