@@ -17,8 +17,8 @@ msgstr "最大缓存大小 (MB)"
 msgid "Collecting data..."
 msgstr "正在收集数据中..."
 
-msgid "Default login username is admin and password is admin123."
-msgstr "默认登录用户名为 admin，密码为 admin123。"
+msgid "Default login username is %s and password is %s."
+msgstr "默认登录用户名为 %s，密码为 %s。"
 
 msgid "Enable"
 msgstr "启用"
