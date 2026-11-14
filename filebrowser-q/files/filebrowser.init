@@ -19,7 +19,7 @@ start_service() {
 	config_get listen_port "config" "listen_port" "8787"
 	config_get root_path "config" "root_path" "/"
 	config_get cacheDir "config" "cacheDir" "/tmp"
-	config_get cacheDirMaxSizeMB "config" "cacheDirMaxSizeMB" "500"
+	config_get cacheDirMaxSizeMB "config" "cacheDirMaxSizeMB" "300"
 
 	root_name=""
 	[ "$root_path" = "/" ] && root_name="root"
@@ -42,7 +42,6 @@ server:
       config:
         defaultEnabled: true
   cacheDir: "$cacheDir"
-  cacheDirCleanup: true
   cacheDirMaxSizeMB: $cacheDirMaxSizeMB
 auth:
   methods:
